@@ -4,6 +4,12 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 import pandas as pd
+import lightgbm as lgb
+import xgboost as xgb
+# 检查GPU是否可用
+print(xgb.__version__)  # 应显示版本号（如2.0.0）
+print('GPU available:', xgb.XGBClassifier().get_params()['gpu_id'] is not None)
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -15,7 +21,3 @@ if __name__ == '__main__':
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
-# main.py
-from utils_jessie import find_outliers_by_3segama
-
-print(dir(find_outliers_by_3segama))
